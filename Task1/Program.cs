@@ -13,24 +13,15 @@ namespace Task1
             int a;
             int b;
 
-            Console.WriteLine("Введите значение a:");
-
-            string lineA = Console.ReadLine();
-            a = Convert.ToInt32(lineA);
-
-            Console.WriteLine("Введите значение b:");
-
-            string lineB = Console.ReadLine();
-            b = Convert.ToInt32(lineB);
-
-            Console.WriteLine("Поменять значения местами?");
-            int c = a;
-           a = b;
-           b = c;
-           Console.ReadKey();
+            a = Helper.GetNumberFromConsole("Введите значение a: ");
+            b = Helper.GetNumberFromConsole("Введите значение b: ");
             
+            Console.WriteLine("Поменять значения местами?");
+            Helper.ReplaceValues(ref a, ref b);
+            Console.ReadKey();
+
             Console.WriteLine($"Значение A = {a}, а значение В = {b}!");
             Console.ReadKey();
-        }
+        }             
     }
 }
