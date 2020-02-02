@@ -10,7 +10,27 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Worlds and Maks");        
+            int a;
+            int b;
+
+            Console.WriteLine("Введите значение a:");
+
+            string lineA = Console.ReadLine();
+            a = Convert.ToInt32(lineA);
+
+            Console.WriteLine("Введите значение b:");
+
+            string lineB = Console.ReadLine();
+            b = Convert.ToInt32(lineB);
+
+            Console.WriteLine("Поменять значения местами?");
+            int c = a;
+           a = b;
+           b = c;
+           Console.ReadKey();
+            
+            Console.WriteLine($"Значение A = {a}, а значение В = {b}!");
+            Console.ReadKey();
         }
     }
 }
